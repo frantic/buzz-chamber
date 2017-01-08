@@ -1,0 +1,29 @@
+{
+  "name": "buzz-chamber",
+  "version": "1.0.0",
+  "description": "Static html server with simple websocket relay",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frantic/buzz-chamber.git"
+  },
+  "keywords": [
+    "static",
+    "html",
+    "websocket",
+    "server",
+    "realy",
+    "proxy",
+    "peer-to-peer",
+    "simple"
+  ],
+  "author": "Alex Kotliarskyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frantic/buzz-chamber/issues"
+  },
+  "homepage": "https://github.com/frantic/buzz-chamber#readme"
+}
