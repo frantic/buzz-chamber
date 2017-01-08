@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js example --port ${PORT:-8033}"
   },
+  "bin": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frantic/buzz-chamber.git"
