@@ -4,8 +4,7 @@
   "description": "Static html server with simple websocket relay",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js example --port ${PORT:-8033}"
   },
   "repository": {
     "type": "git",
@@ -26,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/frantic/buzz-chamber/issues"
   },
-  "homepage": "https://github.com/frantic/buzz-chamber#readme"
+  "homepage": "https://github.com/frantic/buzz-chamber#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ws": "^1.1.1",
+    "yargs": "^6.6.0"
+  }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>buzz-chamber example</title>
+</head>
+<body>
+  <a href="/" target="_blank">
+    Open this page in a separate tab
+  </a>
+  <pre id="log">Initializing...</pre>
+
+  <script type="text/javascript">
+    var uid = Math.round(Math.random() * 1000);
+    function simpleLog(message) {
+      document.getElementById('log').innerHTML += '\n' + message;
+    }
+    simpleLog('My unique ID is ' + uid);
+    simpleLog('Connecting...');
+    var protocol = document.location.href.slice(0, 5) === 'https' ? 'wss://' : 'ws://';
+    var ws = new WebSocket(protocol + document.location.host);
+    ws.onopen = function() {
+      simpleLog('Connected! Broadcasting pings...');
+      setInterval(function() {
+        ws.send('Ping from ' + uid);
+      }, 1000);
+    };
+    ws.onmessage = function(e) {
+      simpleLog('Incoming: ' + e.data);
+    };
+  </script>
+</body>
+</html>
